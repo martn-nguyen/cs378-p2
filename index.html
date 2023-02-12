@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>O's Campus Cafe Menu</title>
+
+    <!-- Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <!-- Implement from below -->
+  <body>
+    <header>
+      <!-- you can add the logo image here -->
+      <img
+        src="https://www.oscampuscafe.com/wp-content/uploads/2019/11/os-campus-cafe-logo-2x.png"
+        alt="O Campus Cafe Logo"
+      />
+    </header>
+    <div class="subheading">Delicious, From-Scratch Recipes Close at Hand</div>
+    <div class="subheading2">The fresh choice of UT!</div>
+    <!-- Menu -->
+    <div class="container menu">
+      <!-- Mac & Cheese -->
+      <div class="row item">
+        <div class="col-4 menu_image">
+          <img
+            src="https://thebakermama.com/wp-content/uploads/2014/09/IMG_1588-scaled.jpg"
+            alt="an image of mac and cheese"
+          />
+        </div>
+        <div class="col-6">
+          <div class="row menu_item">mac & cheese</div>
+        </div>
+        <div class="col-2">
+          <div class="menu_price">$5</div>
+          <div class="d-flex">
+            <button onclick="updateOrder(0, 0)">-</button>
+            <span id="num0">0</span>
+            <button onclick="updateOrder(0, 1)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pasta -->
+      <div class="row item">
+        <div class="col-4 menu_image">
+          <img
+            src="https://www.lastingredient.com/wp-content/uploads/2016/08/burst-tomato-pasta15.jpg"
+            alt="an image of pasta"
+          />
+        </div>
+        <div class="col-6">
+          <div class="row menu_item">pasta</div>
+        </div>
+        <div class="col-2">
+          <div class="menu_price">$8</div>
+          <div class="d-flex">
+            <button onclick="updateOrder(1, 0)">-</button>
+            <span id="num1">0</span>
+            <button onclick="updateOrder(1, 1)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tacos -->
+      <div class="row item">
+        <div class="col-4 menu_image">
+          <img
+            src="https://austinfoodmagazine.com/wp-content/uploads/2019/04/Reunion-19-scaled.jpg"
+            alt="an image of tacos"
+          />
+        </div>
+        <div class="col-6">
+          <div class="row menu_item">tacos</div>
+        </div>
+        <div class="col-2">
+          <div class="menu_price">$8</div>
+          <div class="d-flex">
+            <button onclick="updateOrder(2, 0)">-</button>
+            <span id="num2">0</span>
+            <button onclick="updateOrder(2, 1)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Enchiladas -->
+      <div class="row item">
+        <div class="col-4 menu_image">
+          <img
+            src="https://iamhomesteader.com/wp-content/uploads/2022/02/chicken-enchilada-4.jpg"
+            alt="an image of enchiladas"
+          />
+        </div>
+        <div class="col-6">
+          <div class="row menu_item">enchilada</div>
+        </div>
+        <div class="col-2">
+          <div class="menu_price">$10</div>
+          <div class="d-flex">
+            <button onclick="updateOrder(3, 0)">-</button>
+            <span id="num3">0</span>
+            <button onclick="updateOrder(3, 1)">+</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Total -->
+      <div class="row item">
+        <div class="col-4 menu_image">Subtotal $<span id="total">0</span></div>
+        <div class="col-8 menu_price">
+          <button onclick="order()">Order</button>
+          <button onclick="clearOrder()">Clear all</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- JS Script -->
+    <script src="script.js"></script>
+  </body>
+</html>
